@@ -7,3 +7,9 @@ WORK
 - tips
 - SVG
 - Create IDE
+
+Project Structure
+=================
+web
+ - components
+ - gl
