@@ -1,0 +1,39 @@
+<style>
+    .drop-zone {
+        margin: 2rem;
+        padding: 4rem;
+        background-color: #efa9a9;
+    }
+</style>
+<div class="drop-zone"
+     style="border:1px solid;border-color: #DE4031;">
+    <div id="draggable"
+         draggable="true"
+         style="background-color: #000;padding: 4rem;"></div>
+</div>
+<div class="drop-zone"
+     style="border:1px solid;border-color: #31cfde;"></div>
+<script>
+    const draggableElement = document.querySelector('#draggable');
+
+    draggableElement.addEventListener('dragstart', e => {
+        e.dataTransfer.setData("text/plain", draggableElement.id);
+    });
+
+    for (const dropZone of document.querySelectorAll('.drop-zone')) {
+        dropZone.addEventListener('dragover', e => {
+            e.preventDefault();
+            console.log('over me')
+        });
+
+        dropZone.addEventListener('drop', e => {
+            e.preventDefault();
+            // console.log('drop over me')
+            const droppedElementId = e.dataTransfer.getData('text/plain');
+            const droppedElement = document.getElementById(droppedElementId);
+            dropZone.appendChild(droppedElement);
+
+            console.log(droppedElement);
+        })
+    }
+</script>
