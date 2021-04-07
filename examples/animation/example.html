@@ -1,0 +1,655 @@
+<!-- inspired by this dribbble https://dribbble.com/shots/5058150-Rainy-Night/attachments/5058150-Rainy-Night?mode=media -->
+<style>
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+        content: "";
+    }
+
+    :root {
+        --h: 260;
+        --s: 50%;
+        --base: hsl(var(--h), var(--s), 50%);
+        --c1: hsl(var(--h), var(--s), 5%);
+        --c2: hsl(var(--h), var(--s), 10%);
+        --c3: hsl(var(--h), var(--s), 15%);
+        --c4: hsl(var(--h), var(--s), 20%);
+        --c5: hsl(var(--h), var(--s), 25%);
+        --c6: hsl(var(--h), var(--s), 30%);
+        --c7: hsl(var(--h), var(--s), 35%);
+        --c8: hsl(var(--h), var(--s), 40%);
+        --c9: hsl(var(--h), var(--s), 45%);
+        --c10: hsl(var(--h), var(--s), 50%);
+        --c11: hsl(var(--h), var(--s), 55%);
+        --c12: hsl(var(--h), var(--s), 60%);
+        --c13: hsl(var(--h), var(--s), 65%);
+        --c14: hsl(var(--h), var(--s), 70%);
+        --c15: hsl(var(--h), var(--s), 75%);
+        --c16: hsl(var(--h), var(--s), 80%);
+        --c17: hsl(var(--h), var(--s), 85%);
+        --c18: hsl(var(--h), var(--s), 90%);
+        --c19: hsl(var(--h), var(--s), 95%);
+        --c20: hsl(var(--h), var(--s), 100%);
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .office {
+        position: relative;
+        z-index: 0;
+        --col1: hsl(var(--h), var(--s), 80%);
+        --col2: hsl(var(--h), var(--s), 65%);
+        --col3: hsl(var(--h), var(--s), 55%);
+        height: 80vmin;
+        max-width: 100vmin;
+        margin: 10vmin auto;
+        overflow: hidden;
+        background: hsl(var(--h), var(--s), 50%);
+        background-image: linear-gradient(
+                var(--c11) 0,
+                var(--c11) 2%,
+                var(--c3) 0,
+                var(--c3) 4%,
+                transparent 0,
+                transparent 20%,
+                var(--c11) 0,
+                var(--c11) 22%,
+                var(--c3) 0,
+                var(--c3) 24%,
+                transparent 0,
+                transparent 40%,
+                var(--c11) 0,
+                var(--c11) 42%,
+                var(--c3) 0,
+                var(--c3) 44%,
+                transparent 0
+        ),
+        linear-gradient(
+                90deg,
+                var(--c16),
+                var(--c16) 3%,
+                var(--c13) 0,
+                var(--c13) 14%,
+                var(--c8) 0,
+                var(--c8) 20%,
+                var(--c3) 0
+        );
+        background-size: 16vmin 100vmin, 20vmin 100vmin;
+        background-repeat: no-repeat;
+        background-position: top 15vmin right 0, top 0 right 0;
+    }
+
+    .office:before {
+        content: "";
+        width: 85vmin;
+        height: 20vmin;
+        top: -10vmin;
+        left: -10vmin;
+        border: 1px solid var(--c6);
+        border-radius: 0 0 100% 0;
+        border-top: 0;
+        border-left: 0;
+        transform: rotate(-10deg);
+    }
+
+    .office:after {
+        content: "";
+        width: 0.5vmin;
+        height: 0.5vmin;
+        background: var(--c20);
+        border-radius: 50%;
+        top: 15vmin;
+        left: 2vmin;
+        box-shadow: 0 0 0.6vmin 0.3vmin var(--c19), 0 0 1vmin 0.6vmin var(--c14),
+        0 0 1.4vmin 1vmin var(--c15), 10vmin -2.25vmin 0 0 var(--c19),
+        10vmin -2.25vmin 0.6vmin 0.1vmin var(--c19),
+        10vmin -2.25vmin 1vmin 0.6vmin var(--c17),
+        10vmin -2.25vmin 1.4vmin 1vmin var(--c15), 20vmin -4.5vmin 0 0 var(--c19),
+        20vmin -4.5vmin 0.6vmin 0.1vmin var(--c19),
+        20vmin -4.5vmin 1vmin 0.6vmin var(--c13),
+        20vmin -4.5vmin 1.4vmin 1vmin var(--c15), 30vmin -7.5vmin 0 0 var(--c19),
+        30vmin -7.5vmin 0.6vmin 0.1vmin var(--c19),
+        30vmin -7.5vmin 1vmin 0.4vmin var(--c17),
+        30vmin -7.5vmin 1.4vmin 0.4vmin var(--c15), 40vmin -11vmin 0 0 var(--c19),
+        40vmin -11vmin 0.6vmin 0.1vmin var(--c19),
+        40vmin -11vmin 1vmin 0.4vmin var(--c17),
+        40vmin -11vmin 1.4vmin 0.4vmin var(--c15), 75vmin -12vmin 0 0 var(--c19),
+        75vmin -12vmin 0.6vmin 0.1vmin var(--c19),
+        75vmin -12vmin 1vmin 0.4vmin var(--c17),
+        75vmin -12vmin 1.4vmin 0.4vmin var(--c15), 85vmin -7.75vmin 0 0 var(--c19),
+        85vmin -7.75vmin 0.6vmin 0.1vmin var(--c19),
+        85vmin -7.75vmin 1vmin 0.4vmin var(--c17),
+        85vmin -7.75vmin 1.4vmin 0.4vmin var(--c15), 95vmin -4.25vmin 0 0 var(--c19),
+        95vmin -4.25vmin 0.6vmin 0.1vmin var(--c19),
+        95vmin -4.25vmin 1vmin 0.4vmin var(--c17),
+        95vmin -4.25vmin 1.4vmin 0.4vmin var(--c15);
+        z-index: 10;
+    }
+
+    .office div,
+    *:before,
+    *:after {
+        position: absolute;
+    }
+
+    .shelf {
+        background-color: var(--c12);
+        width: 50vmin;
+        height: 3vmin;
+        top: 20vmin;
+        left: 25vmin;
+        box-shadow: 0.6vmin 0.6vmin 0 0.6vmin var(--c6);
+    }
+
+    .shelf:before {
+        content: "";
+        width: 55vmin;
+        height: 20vmin;
+        top: -30vmin;
+        right: -40vmin;
+        border: 1px solid var(--c3);
+        border-radius: 0 0 0 100%;
+        border-top: 0;
+        border-right: 0;
+        z-index: 1;
+        transform: rotate(10deg);
+    }
+
+    .plant {
+        bottom: 3vmin;
+        left: 2vmin;
+        height: 7vmin;
+        width: 10vmin;
+        background: var(--c7);
+        color: var(--c6);
+        background-image: linear-gradient(
+                45deg,
+                currentColor 10%,
+                transparent 0,
+                transparent 50%,
+                currentColor 0%,
+                currentColor 60%,
+                transparent 0
+        ),
+        linear-gradient(
+                -45deg,
+                currentColor 10%,
+                transparent 0,
+                transparent 50%,
+                currentColor 0%,
+                currentColor 60%,
+                transparent 0
+        );
+        background-size: 1vmin 1vmin;
+        border-top: 3vmin solid var(--c6);
+        border-radius: 3px 3px 1vmin 1vmin;
+    }
+
+    .plant:after {
+        content: "";
+        bottom: 6.5vmin;
+        width: 4vmin;
+        height: 10vmin;
+        border-radius: 50% 50% 30% 30%;
+        background: var(--c4);
+        left: 3vmin;
+        z-index: -1;
+    }
+
+    .plant:before {
+        content: "";
+        bottom: 11.5vmin;
+        width: 3vmin;
+        height: 7vmin;
+        border-radius: 50% 50% 50% 60%;
+        background: var(--c4);
+        left: 0.75vmin;
+        box-shadow: 5.25vmin 3vmin 0 -0.25vmin var(--c4);
+    }
+
+    .table {
+        width: 80vmin;
+        height: 16vmin;
+        bottom: 0;
+        background: hsl(var(--h), var(--s), 40%);
+        border-top: 2vmin solid hsl(var(--h), var(--s), 70%);
+        box-shadow: inset 10vmin 0 hsl(var(--h), var(--s), 10%, 0.6),
+        inset 0 3vmin 0 var(--c10), inset 0 6vmin 0 var(--c6);
+    }
+
+    .chair {
+        width: 32vmin;
+        height: 32vmin;
+        bottom: 0;
+        right: 10vmin;
+        background: var(--c3);
+        border-radius: 10% 10% 0 0;
+        box-shadow: -3vmin 0vmin 0 var(--c4), -5vmin 0vmin 0 var(--c5);
+    }
+
+    .chair:after {
+        width: 20vmin;
+        height: 8vmin;
+        background: var(--c4);
+        bottom: 0;
+        right: 100%;
+        border-radius: 20vmin 0 0 0;
+        transform: skew(10deg);
+    }
+
+    .imac {
+        --w: 30vmin;
+        height: 32vmin;
+        width: calc(1.77 * var(--w));
+        background: var(--c3);
+        bottom: 20vmin;
+        left: 5vmin;
+        box-shadow: inset 0 0 0 2vmin var(--c2);
+        border-radius: 1vmin;
+        border-bottom: 5vmin solid var(--c13);
+    }
+
+    .imac:before {
+        width: 7vmin;
+        bottom: -9vmin;
+        height: 3.75vmin;
+        background: var(--c12);
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-top: 1vmin solid var(--c8);
+    }
+
+    .imac:after {
+        width: 26vmin;
+        height: 0.5vmin;
+        background: var(--c15);
+        bottom: -9vmin;
+        left: 16vmin;
+    }
+
+    .mouse {
+        background: var(--c17);
+        width: 8vmin;
+        height: 2vmin;
+        box-shadow: inset -2vmin 0 var(--c18), inset 1vmin 0 var(--c16);
+        top: -4vmin;
+        left: 46vmin;
+        border-radius: 1.5vmin 1.5vmin 0 0;
+    }
+
+    .apple {
+        color: var(--c5);
+        bottom: -3.5vmin;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background: currentcolor;
+        width: 2.08vmin;
+        height: 1.98vmin;
+        border-radius: 35% 35% 41% 41% / 42% 42% 75% 75%;
+    }
+
+    .apple:before {
+        background: currentColor;
+        width: 0.65vmin;
+        height: 0.65vmin;
+        margin: -0.65vmin 0 0 0.9vmin;
+        border-radius: 100% 0;
+        z-index: 5;
+    }
+
+    .apple:after {
+        color: var(--c13);
+        background: currentColor;
+        width: 0.9vmin;
+        height: 0.9vmin;
+        margin: 0.28vmin 0 0 1.74vmin;
+        border-radius: 50%;
+        transform: rotate (-53deg);
+        z-index: 4;
+        box-shadow: -1.27vmin -1.095vmin 0, -1.18vmin -1.07vmin 0,
+        -1.155vmin -1.025vmin 0, -1.055vmin -1.095vmin 0, -1.05vmin -1.095vmin 0,
+        -1.29vmin 1.66vmin 0;
+    }
+
+    .lamp {
+        left: 50vmin;
+        top: 32vmin;
+        width: 16vmin;
+        height: 10vmin;
+        background: var(--c5);
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        box-shadow: inset -5vmin 0 0 -2vmin var(--c4), inset 1vmin 0 0 var(--c16),
+        0 1vmin 0 var(--c19);
+    }
+
+    .lamp:before {
+        width: 8vmin;
+        height: 6vmin;
+        background-color: inherit;
+        background-image: linear-gradient(var(--c3) 50%, transparent 0%);
+        background-position: top 3vmin right 0;
+        background-size: 4vmin 1vmin;
+        background-repeat: repeat-y;
+        top: -4.5vmin;
+        left: 0;
+        right: 0;
+        margin: auto;
+        box-shadow: inset -4vmin 0 0 -2.5vmin var(--c4), inset 0.75vmin 0 0 var(--c16);
+        border-radius: 1vmin 1vmin 0 0;
+    }
+
+    .lamp:after {
+        width: 44vmin;
+        height: 22vmin;
+        background: var(--c20);
+        mix-blend-mode: soft-light;
+        left: -14vmin;
+        top: 10vmin;
+        clip-path: polygon(33.3% 0, 66.6% 0, 100% 100%, 0 100%);
+    }
+
+    .off .lamp:after {
+        background: transparent;
+    }
+
+    .lamp-button {
+        position: absolute;
+        top: -5.25vmin;
+        width: 4vmin;
+        height: 3vmin;
+        background: var(--c2);
+        border: none;
+        -webkit-appearance: none;
+        transform: rotate(16deg);
+        left: 6vmin;
+        z-index: -1;
+        cursor: pointer;
+    }
+
+    .off .lamp-button {
+        transform: rotate(-16deg);
+    }
+
+    .lamp-button:active,
+    .lamp-button:focus {
+        outline-color: var(--c7);
+    }
+
+    .handle {
+        width: 18vmin;
+        height: 60vmin;
+        color: var(--c4);
+        border-right: 2vmin solid;
+        border-top: 2vmin solid;
+        transform: rotate(20deg);
+        border-radius: 0 4vmin 0 0;
+        box-shadow: inset -0.25vmin 0.25vmin 0 var(--c16);
+        z-index: -1;
+    }
+
+    .pencils {
+        width: 7vmin;
+        height: 7vmin;
+        background: var(--c6);
+        bottom: 25vmin;
+        right: 3vmin;
+        border-radius: 0 0 1vmin 1vmin;
+        box-shadow: inset -2vmin 0 var(--c2), inset 1vmin 0 var(--c8);
+    }
+
+    .pencils:after {
+        width: 1vmin;
+        height: 12vmin;
+        background-image: linear-gradient(
+                var(--c20) 5%,
+                var(--c15) 0,
+                var(--c17) 15%,
+                var(--c9) 0
+        );
+        clip-path: polygon(50% 0, 100% 20%, 100% 100%, 0% 100%, 0% 20%);
+        z-index: -1;
+        bottom: 0;
+        left: 1vmin;
+        transform: rotate(-6deg);
+    }
+
+    .pencils:before {
+        width: 1vmin;
+        height: 14vmin;
+        background-image: linear-gradient(
+                var(--c20) 8%,
+                var(--c14) 0,
+                var(--c17) 15%,
+                var(--c7) 0
+        );
+        clip-path: polygon(50% 0, 100% 20%, 100% 100%, 0% 100%, 0% 20%);
+        z-index: -1;
+        bottom: 0;
+        left: 5vmin;
+        transform: rotate(6deg);
+    }
+
+    .mug {
+        width: 7vmin;
+        height: 7vmin;
+        background: var(--c16);
+        bottom: 16vmin;
+        left: 3vmin;
+        border-radius: 0 0 1vmin 1vmin;
+        box-shadow: inset -2vmin 0 var(--c17), inset 1vmin 0 var(--c15);
+    }
+
+    .mug:after {
+        width: 2vmin;
+        height: 4vmin;
+        border: 1vmin solid var(--c17);
+        border-radius: 0 50% 50% 0;
+        border-left: none;
+        left: 100%;
+        top: 1vmin;
+    }
+
+    .mug:before {
+        width: 2.5vmin;
+        height: 4vmin;
+        background-image: linear-gradient(
+                90deg,
+                transparent,
+                transparent 48%,
+                var(--c6) 0%,
+                var(--c6) 52%,
+                transparent 0%
+        );
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-bottom: 2.5vmin solid var(--c7);
+    }
+
+    .note {
+        width: 5vmin;
+        height: 5vmin;
+        background-color: var(--c16);
+        left: 16vmin;
+        bottom: 19vmin;
+        transform: rotate(-4deg);
+        background-image: linear-gradient(
+                transparent 60%,
+                var(--c12) 0%,
+                var(--c12) 80%,
+                transparent 0
+        ),
+        linear-gradient(
+                transparent 60%,
+                var(--c12) 0%,
+                var(--c12) 80%,
+                transparent 0
+        );
+        background-repeat: no-repeat;
+        background-size: 70% 2vmin, 50% 2vmin;
+        background-position: top 0 center, top 1vmin left 1vmin;
+    }
+
+    .bin {
+        color: var(--c8);
+        width: 23vmin;
+        height: 30vmin;
+        bottom: -20vmin;
+        right: -16vmin;
+        background-color: var(--c2);
+        background-image: linear-gradient(
+                45deg,
+                currentColor 10%,
+                transparent 0,
+                transparent 50%,
+                currentColor 0%,
+                currentColor 60%,
+                transparent 0
+        ),
+        linear-gradient(
+                -45deg,
+                currentColor 10%,
+                transparent 0,
+                transparent 50%,
+                currentColor 0%,
+                currentColor 60%,
+                transparent 0
+        );
+        background-size: 2vmin 2vmin;
+        border-top: 2vmin solid;
+        clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+    }
+
+    .pict {
+        background: var(--c7);
+        background-image: linear-gradient(38deg, var(--c6) 30%, transparent 0%);
+        width: 20vmin;
+        height: 36vmin;
+        border: 2vmin solid var(--c12);
+        box-shadow: inset -0.5vmin -0.5vmin 0 0 var(--c16), 1vmin 1vmin 0 var(--c6);
+        left: -4vmin;
+        top: 14vmin;
+        z-index: -1;
+    }
+
+    .books {
+        width: 15.5vmin;
+        right: 0;
+        height: 100%;
+        background-image: linear-gradient(90deg, var(--c8) 10%, transparent 0),
+        linear-gradient(90deg, var(--c7) 80%, transparent 0),
+        linear-gradient(90deg, var(--c6) 90%, transparent 0),
+        linear-gradient(
+                90deg,
+                var(--c8) 30%,
+                transparent 0,
+                transparent 34%,
+                var(--c9) 0,
+                var(--c9) 60%,
+                transparent 0,
+                transparent 64%,
+                var(--c7) 0,
+                var(--c7) 94%,
+                transparent 0
+        );
+        background-size: 6vmin 13vmin, 6vmin 13vmin, 6vmin 13vmin;
+        background-position: top 2vmin left 0, top 2vmin left 0, top 2vmin left 0,
+        top 22vmin left 0, top 40vmin left 0;
+        background-repeat: repeat-x;
+    }
+
+    .car {
+        bottom: 4vmin;
+        left: 13vmin;
+        width: 13vmin;
+        height: 4vmin;
+        background: var(--c6);
+        border-radius: 10% 40% 0 0 / 100% 80% 0 0;
+        z-index: -1;
+    }
+
+    .car:before {
+        width: 3vmin;
+        height: 3vmin;
+        background: var(--c13);
+        border-radius: 50%;
+        z-index: 1;
+        border: 1vmin solid var(--c3);
+        box-shadow: 0 0 0 0.5vmin var(--c10), 6vmin 0 0 -1vmin var(--c13),
+        6vmin 0 0 var(--c3), 6vmin 0 0 0.5vmin var(--c10);
+        bottom: -1vmin;
+        left: 2vmin;
+    }
+
+    .car:after {
+        left: 0;
+        bottom: 0;
+        height: 8vmin;
+        width: 10vmin;
+        background-color: var(--c4);
+        background-image: linear-gradient(
+                90deg,
+                transparent 56%,
+                var(--c6) 0,
+                var(--c6) 62%,
+                transparent 0
+        );
+        border-radius: 50% 40% 0 0 / 100% 80% 0 0;
+        border: 0.6vmin solid var(--c6);
+        border-bottom: 4vmin solid var(--c6);
+    }
+
+    .clock {
+        width: 20vmin;
+        height: 10vmin;
+        background: var(--c5);
+        border: 2vmin solid var(--c7);
+        box-shadow: -0.25vmin -0.25vmin 0 0.25vmin var(--c15);
+        bottom: 3vmin;
+        right: 1vmin;
+        font-family: "Share Tech Mono", monospace;
+        text-align: center;
+        line-height: 6vmin;
+        color: var(--c15);
+        font-size: 3vmin;
+    }
+
+    .clock span {
+        position: relative;
+    }
+
+    .clock span:before {
+        content: "88:88:88";
+        opacity: 0.3;
+    }
+</style>
+
+<div class="office">
+    <div class="shelf">
+        <div class="plant"></div>
+        <div class="car"></div>
+        <div class="clock"><span id="hms">88:88:88</span></div>
+    </div>
+    <div class="books"></div>
+    <div class="pencils"></div>
+    <div class="table">
+        <div class="mouse"></div>
+    </div>
+    <div class="imac">
+        <div class="apple"></div>
+    </div>
+    <div class="mug"></div>
+    <div class="note"></div>
+    <div class="lamp">
+        <div class="handle"></div>
+        <button class="lamp-button" aria-label="light-on"></button>
+    </div>
+    <div class="chair"></div>
+    <div class="bin"></div>
+    <div class="pict"></div>
+</div>

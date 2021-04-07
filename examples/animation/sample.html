@@ -1,0 +1,232 @@
+<style>
+
+    *, *:before, *:after {
+        box-sizing: border-box;
+        content: "";
+    }
+
+    :root {
+        --h: 260;
+        --s: 50%;
+        --base: hsl(var(--h), var(--s), 50%);
+        --c1: hsl(var(--h), var(--s), 5%);
+        --c2: hsl(var(--h), var(--s), 10%);
+        --c3: hsl(var(--h), var(--s), 15%);
+        --c4: hsl(var(--h), var(--s), 20%);
+        --c5: hsl(var(--h), var(--s), 25%);
+        --c6: hsl(var(--h), var(--s), 30%);
+        --c7: hsl(var(--h), var(--s), 35%);
+        --c8: hsl(var(--h), var(--s), 40%);
+        --c9: hsl(var(--h), var(--s), 45%);
+        --c10: hsl(var(--h), var(--s), 50%);
+        --c11: hsl(var(--h), var(--s), 55%);
+        --c12: hsl(var(--h), var(--s), 60%);
+        --c13: hsl(var(--h), var(--s), 65%);
+        --c14: hsl(var(--h), var(--s), 70%);
+        --c15: hsl(var(--h), var(--s), 75%);
+        --c16: hsl(var(--h), var(--s), 80%);
+        --c17: hsl(var(--h), var(--s), 85%);
+        --c18: hsl(var(--h), var(--s), 90%);
+        --c19: hsl(var(--h), var(--s), 95%);
+        --c20: hsl(var(--h), var(--s), 100%);
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .office {
+        position: relative;
+        z-index: 0;
+        --col1: hsl(var(--h), var(--s), 80%);
+        --col2: hsl(var(--h), var(--s), 65%);
+        --col3: hsl(var(--h), var(--s), 55%);
+        height: 80vmin;
+        max-width: 100vmin;
+        margin: 10vmin auto;
+        overflow: hidden;
+        /*background: hsl(var(--h), var(--s), 50%);*/
+        /*background-image: linear-gradient(*/
+        /*var(--c11) 0,*/
+        /*var(--c11) 2%,*/
+        /*var(--c3) 0,*/
+        /*var(--c3) 4%,*/
+        /*transparent 0,*/
+        /*transparent 20%,*/
+        /*var(--c11) 0,*/
+        /*var(--c11) 22%,*/
+        /*var(--c3) 0,*/
+        /*var(--c3) 24%,*/
+        /*transparent 0,*/
+        /*transparent 40%,*/
+        /*var(--c11) 0,*/
+        /*var(--c11) 42%,*/
+        /*var(--c3) 0,*/
+        /*var(--c3) 44%,*/
+        /*transparent 0*/
+        /*),*/
+        /*linear-gradient(*/
+        /*90deg,*/
+        /*var(--c16),*/
+        /*var(--c16) 3%,*/
+        /*var(--c13) 0,*/
+        /*var(--c13) 14%,*/
+        /*var(--c8) 0,*/
+        /*var(--c8) 20%,*/
+        /*var(--c3) 0*/
+        /*);*/
+        background-size: 16vmin 100vmin, 20vmin 100vmin;
+        background-repeat: no-repeat;
+        background-position: top 15vmin right 0, top 0 right 0;
+    }
+
+    .office:before {
+        content: "";
+        width: 85vmin;
+        height: 20vmin;
+        top: -10vmin;
+        left: -10vmin;
+        border: 1px solid var(--c6);
+        border-radius: 0 0 100% 0;
+        border-top: 0;
+        border-left: 0;
+        transform: rotate(-10deg);
+    }
+
+    .office:after {
+        content: "";
+        width: 0.5vmin;
+        height: 0.5vmin;
+        background: var(--c20);
+        border-radius: 50%;
+        top: 15vmin;
+        left: 2vmin;
+        /*-webkit-animation: blink 3.0s linear infinite;*/
+        /*-moz-animation: blink 3.0s linear infinite;*/
+        /*-ms-animation: blink 3.0s linear infinite;*/
+        /*-o-animation: blink 3.0s linear infinite;*/
+        animation: blink 5s ease infinite;
+        box-shadow: 0 0 0.6vmin 0.3vmin var(--c19), 0 0 1vmin 0.6vmin var(--c14), 0 0 1.4vmin 1vmin var(--c15), 10vmin -2.25vmin 0 0 var(--c19);
+        /*,*/
+        /*10vmin -2.25vmin 0.6vmin 0.1vmin var(--c19),*/
+        /*10vmin -2.25vmin 1vmin 0.6vmin var(--c17),*/
+        /*10vmin -2.25vmin 1.4vmin 1vmin var(--c15), 20vmin -4.5vmin 0 0 var(--c19),*/
+        /*20vmin -4.5vmin 0.6vmin 0.1vmin var(--c19),*/
+        /*20vmin -4.5vmin 1vmin 0.6vmin var(--c13),*/
+        /*20vmin -4.5vmin 1.4vmin 1vmin var(--c15), 30vmin -7.5vmin 0 0 var(--c19),*/
+        /*30vmin -7.5vmin 0.6vmin 0.1vmin var(--c19),*/
+        /*30vmin -7.5vmin 1vmin 0.4vmin var(--c17),*/
+        /*30vmin -7.5vmin 1.4vmin 0.4vmin var(--c15), 40vmin -11vmin 0 0 var(--c19),*/
+        /*40vmin -11vmin 0.6vmin 0.1vmin var(--c19),*/
+        /*40vmin -11vmin 1vmin 0.4vmin var(--c17),*/
+        /*40vmin -11vmin 1.4vmin 0.4vmin var(--c15), 75vmin -12vmin 0 0 var(--c19),*/
+        /*75vmin -12vmin 0.6vmin 0.1vmin var(--c19),*/
+        /*75vmin -12vmin 1vmin 0.4vmin var(--c17),*/
+        /*75vmin -12vmin 1.4vmin 0.4vmin var(--c15), 85vmin -7.75vmin 0 0 var(--c19),*/
+        /*85vmin -7.75vmin 0.6vmin 0.1vmin var(--c19),*/
+        /*85vmin -7.75vmin 1vmin 0.4vmin var(--c17),*/
+        /*85vmin -7.75vmin 1.4vmin 0.4vmin var(--c15), 95vmin -4.25vmin 0 0 var(--c19),*/
+        /*95vmin -4.25vmin 0.6vmin 0.1vmin var(--c19),*/
+        /*95vmin -4.25vmin 1vmin 0.4vmin var(--c17),*/
+        /*95vmin -4.25vmin 1.4vmin 0.4vmin var(--c15);*/
+        z-index: 10;
+    }
+
+    @keyframes blink {
+        0% {
+            box-shadow: 0 0 0 0 hsl(180, 0%, 0%), 0 0 0 0 hsl(180, 0%, 0%), 0 0 0 0 hsl(180, 0%, 0%), 0 0 0 0 hsl(180, 0%, 0%);
+        }
+        50% {
+            box-shadow: 0 0 0.6vmin 0.3vmin var(--c19), 0 0 1vmin 0.6vmin var(--c14), 0 0 1.4vmin 1vmin var(--c15), 10vmin -2.25vmin 0 0 var(--c19);
+        }
+        100% {
+            box-shadow: 0 0 0 0 hsl(180, 0%, 0%), 0 0 0 0 hsl(180, 0%, 0%), 0 0 0 0 hsl(180, 0%, 0%), 0 0 0 0 hsl(180, 0%, 0%);
+        }
+    }
+
+    /*@-webkit-keyframes blink {*/
+    /*0% {*/
+    /*text-shadow: 0 0 15px red;*/
+    /*}*/
+    /*50% {*/
+    /*text-shadow: 0 0 0;*/
+    /*}*/
+    /*100% {*/
+    /*text-shadow: 0 0 15px red;*/
+    /*}*/
+    /*}*/
+
+
+    .office div,
+    *:before,
+    *:after {
+        position: absolute;
+    }
+
+    .mug {
+        width: 7vmin;
+        height: 7vmin;
+        background: var(--c16);
+        bottom: 16vmin;
+        left: 3vmin;
+        border-radius: 0 0 1vmin 1vmin;
+        box-shadow: inset -2vmin 0 var(--c17), inset 1vmin 0 var(--c15);
+    }
+
+    .mug:after {
+        width: 2vmin;
+        height: 4vmin;
+        border: 1vmin solid var(--c17);
+        border-radius: 0 50% 50% 0;
+        border-left: none;
+        left: 100%;
+        top: 1vmin;
+    }
+
+    .mug:before {
+        width: 2.5vmin;
+        height: 4vmin;
+        background-image: linear-gradient(
+                90deg,
+                transparent,
+                transparent 48%,
+                var(--c6) 0%,
+                var(--c6) 52%,
+                transparent 0%
+        );
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-bottom: 2.5vmin solid var(--c7);
+    }
+
+
+    .shelf {
+        /*background-color: var(--c12);*/
+        width: 50vmin;
+        height: 3vmin;
+        top: 20vmin;
+        left: 25vmin;
+        /*box-shadow: 0.6vmin 0.6vmin 0 0.6vmin var(--c6);*/
+    }
+
+    .shelf:before {
+        content: "";
+        width: 55vmin;
+        height: 20vmin;
+        top: -30vmin;
+        right: -40vmin;
+        border: 1px solid var(--c3);
+        border-radius: 0 0 0 100%;
+        border-top: 0;
+        border-right: 0;
+        z-index: 1;
+        transform: rotate(10deg);
+    }
+
+
+</style>
+<div class="office">
+    <div class="shelf"></div>
+    <div class="mug"></div>
+</div>
