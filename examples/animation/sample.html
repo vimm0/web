@@ -45,36 +45,6 @@
         max-width: 100vmin;
         margin: 10vmin auto;
         overflow: hidden;
-        /*background: hsl(var(--h), var(--s), 50%);*/
-        /*background-image: linear-gradient(*/
-        /*var(--c11) 0,*/
-        /*var(--c11) 2%,*/
-        /*var(--c3) 0,*/
-        /*var(--c3) 4%,*/
-        /*transparent 0,*/
-        /*transparent 20%,*/
-        /*var(--c11) 0,*/
-        /*var(--c11) 22%,*/
-        /*var(--c3) 0,*/
-        /*var(--c3) 24%,*/
-        /*transparent 0,*/
-        /*transparent 40%,*/
-        /*var(--c11) 0,*/
-        /*var(--c11) 42%,*/
-        /*var(--c3) 0,*/
-        /*var(--c3) 44%,*/
-        /*transparent 0*/
-        /*),*/
-        /*linear-gradient(*/
-        /*90deg,*/
-        /*var(--c16),*/
-        /*var(--c16) 3%,*/
-        /*var(--c13) 0,*/
-        /*var(--c13) 14%,*/
-        /*var(--c8) 0,*/
-        /*var(--c8) 20%,*/
-        /*var(--c3) 0*/
-        /*);*/
         background-size: 16vmin 100vmin, 20vmin 100vmin;
         background-repeat: no-repeat;
         background-position: top 15vmin right 0, top 0 right 0;
@@ -101,60 +71,46 @@
         border-radius: 50%;
         top: 15vmin;
         left: 2vmin;
-        /*-webkit-animation: blink 3.0s linear infinite;*/
-        /*-moz-animation: blink 3.0s linear infinite;*/
-        /*-ms-animation: blink 3.0s linear infinite;*/
-        /*-o-animation: blink 3.0s linear infinite;*/
-        animation: blink 5s ease infinite;
-        box-shadow: 0 0 0.6vmin 0.3vmin var(--c19), 0 0 1vmin 0.6vmin var(--c14), 0 0 1.4vmin 1vmin var(--c15), 10vmin -2.25vmin 0 0 var(--c19);
-        /*,*/
-        /*10vmin -2.25vmin 0.6vmin 0.1vmin var(--c19),*/
-        /*10vmin -2.25vmin 1vmin 0.6vmin var(--c17),*/
-        /*10vmin -2.25vmin 1.4vmin 1vmin var(--c15), 20vmin -4.5vmin 0 0 var(--c19),*/
-        /*20vmin -4.5vmin 0.6vmin 0.1vmin var(--c19),*/
-        /*20vmin -4.5vmin 1vmin 0.6vmin var(--c13),*/
-        /*20vmin -4.5vmin 1.4vmin 1vmin var(--c15), 30vmin -7.5vmin 0 0 var(--c19),*/
-        /*30vmin -7.5vmin 0.6vmin 0.1vmin var(--c19),*/
-        /*30vmin -7.5vmin 1vmin 0.4vmin var(--c17),*/
-        /*30vmin -7.5vmin 1.4vmin 0.4vmin var(--c15), 40vmin -11vmin 0 0 var(--c19),*/
-        /*40vmin -11vmin 0.6vmin 0.1vmin var(--c19),*/
-        /*40vmin -11vmin 1vmin 0.4vmin var(--c17),*/
-        /*40vmin -11vmin 1.4vmin 0.4vmin var(--c15), 75vmin -12vmin 0 0 var(--c19),*/
-        /*75vmin -12vmin 0.6vmin 0.1vmin var(--c19),*/
-        /*75vmin -12vmin 1vmin 0.4vmin var(--c17),*/
-        /*75vmin -12vmin 1.4vmin 0.4vmin var(--c15), 85vmin -7.75vmin 0 0 var(--c19),*/
-        /*85vmin -7.75vmin 0.6vmin 0.1vmin var(--c19),*/
-        /*85vmin -7.75vmin 1vmin 0.4vmin var(--c17),*/
-        /*85vmin -7.75vmin 1.4vmin 0.4vmin var(--c15), 95vmin -4.25vmin 0 0 var(--c19),*/
-        /*95vmin -4.25vmin 0.6vmin 0.1vmin var(--c19),*/
-        /*95vmin -4.25vmin 1vmin 0.4vmin var(--c17),*/
-        /*95vmin -4.25vmin 1.4vmin 0.4vmin var(--c15);*/
+        animation: glowing 1300ms infinite;
+        opacity: 1;
+        box-shadow: 0 0 0.6vmin 0.3vmin var(--c19), 0 0 1vmin 0.6vmin var(--c14),
+        0 0 1.4vmin 1vmin var(--c15), 10vmin -2.25vmin 0 0 var(--c19),
+        10vmin -2.25vmin 0.6vmin 0.1vmin var(--c19),
+        10vmin -2.25vmin 1vmin 0.6vmin var(--c17),
+        10vmin -2.25vmin 1.4vmin 1vmin var(--c15), 20vmin -4.5vmin 0 0 var(--c19),
+        20vmin -4.5vmin 0.6vmin 0.1vmin var(--c19),
+        20vmin -4.5vmin 1vmin 0.6vmin var(--c13),
+        20vmin -4.5vmin 1.4vmin 1vmin var(--c15), 30vmin -7.5vmin 0 0 var(--c19),
+        30vmin -7.5vmin 0.6vmin 0.1vmin var(--c19),
+        30vmin -7.5vmin 1vmin 0.4vmin var(--c17),
+        30vmin -7.5vmin 1.4vmin 0.4vmin var(--c15), 40vmin -11vmin 0 0 var(--c19),
+        40vmin -11vmin 0.6vmin 0.1vmin var(--c19),
+        40vmin -11vmin 1vmin 0.4vmin var(--c17),
+        40vmin -11vmin 1.4vmin 0.4vmin var(--c15), 75vmin -12vmin 0 0 var(--c19),
+        75vmin -12vmin 0.6vmin 0.1vmin var(--c19),
+        75vmin -12vmin 1vmin 0.4vmin var(--c17),
+        75vmin -12vmin 1.4vmin 0.4vmin var(--c15), 85vmin -7.75vmin 0 0 var(--c19),
+        85vmin -7.75vmin 0.6vmin 0.1vmin var(--c19),
+        85vmin -7.75vmin 1vmin 0.4vmin var(--c17),
+        85vmin -7.75vmin 1.4vmin 0.4vmin var(--c15), 95vmin -4.25vmin 0 0 var(--c19),
+        95vmin -4.25vmin 0.6vmin 0.1vmin var(--c19),
+        95vmin -4.25vmin 1vmin 0.4vmin var(--c17),
+        95vmin -4.25vmin 1.4vmin 0.4vmin var(--c15);
         z-index: 10;
     }
 
-    @keyframes blink {
+
+    @keyframes glowing {
         0% {
-            box-shadow: 0 0 0 0 hsl(180, 0%, 0%), 0 0 0 0 hsl(180, 0%, 0%), 0 0 0 0 hsl(180, 0%, 0%), 0 0 0 0 hsl(180, 0%, 0%);
+            opacity: 0;
         }
         50% {
-            box-shadow: 0 0 0.6vmin 0.3vmin var(--c19), 0 0 1vmin 0.6vmin var(--c14), 0 0 1.4vmin 1vmin var(--c15), 10vmin -2.25vmin 0 0 var(--c19);
+            opacity: 1;
         }
         100% {
-            box-shadow: 0 0 0 0 hsl(180, 0%, 0%), 0 0 0 0 hsl(180, 0%, 0%), 0 0 0 0 hsl(180, 0%, 0%), 0 0 0 0 hsl(180, 0%, 0%);
-        }
+            opacity: 0;
+                }
     }
-
-    /*@-webkit-keyframes blink {*/
-    /*0% {*/
-    /*text-shadow: 0 0 15px red;*/
-    /*}*/
-    /*50% {*/
-    /*text-shadow: 0 0 0;*/
-    /*}*/
-    /*100% {*/
-    /*text-shadow: 0 0 15px red;*/
-    /*}*/
-    /*}*/
 
 
     .office div,
