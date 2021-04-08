@@ -1,0 +1,347 @@
+<!--https://codepen.io/crystalrhee/pen/gOPrEZX-->
+<style>
+    html {
+        display: grid;
+        min-height: 100%;
+    }
+
+    body {
+        display: grid;
+        text-transform: uppercase;
+        min-width: 1600px;
+        background: #231f20;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: 100px;
+    }
+
+    .item {
+        position: relative;
+    }
+
+    .cup {
+        background: #231f20;
+        border: 2px solid #ffffff;
+        position: absolute;
+    }
+
+    .handle {
+        background: transparent;
+        border: 2px solid #ffffff;
+        border-radius: 60% 30%;
+        height: 20px;
+        left: 90%;
+        position: absolute;
+        top: 10%;
+        width: 15px;
+        z-index: -1;
+    }
+
+    .cup-tall {
+        width: 55px;
+        height: 40px;
+        border-radius: 0 0 5rem 5rem;
+        margin: 30px;
+    }
+
+    .cup-grande {
+        width: 70px;
+        height: 50px;
+        border-radius: 0 0 5rem 5rem;
+        margin: 23px;
+    }
+
+    .espresso {
+        background: linear-gradient(to bottom, #231f20 60%, #643718 60%);
+    }
+
+    .doppio {
+        background: linear-gradient(to bottom, #231f20 35%, #643718 35%);
+    }
+
+    .lungo {
+        background: linear-gradient(to bottom, #231f20 20%, #b0dfe1 20%, #b0dfe1 60%, #643718 60%);
+    }
+
+    .ristretto {
+        background: linear-gradient(to bottom, #231f20 70%, #643718 70%);
+    }
+
+    .macchiato {
+        background: linear-gradient(to bottom, #231f20 20%, #ffeeca 20%, #ffeeca 60%, #643718 60%);
+    }
+
+    .corretto {
+        background: linear-gradient(to bottom, #231f20 30%, #fd862b 30%, #fd862b 60%, #643718 60%);
+    }
+
+    .conpanna {
+        background: linear-gradient(to bottom, #231f20 5%, #ffeeca 5%, #ffeeca 60%, #643718 60%);
+    }
+
+    .romano {
+        background: linear-gradient(to bottom, #231f20 50%, #643718 50%);
+    }
+
+    .cappuccino {
+        background: linear-gradient(to bottom, #ffeeca 25%, #ffd6b0 25%, #ffd6b0 50%, #643718 50%);
+    }
+
+    .americano {
+        background: linear-gradient(to bottom, #231f20 10%, #b0dfe1 10%, #b0dfe1 65%, #643718 65%);
+    }
+
+    .cafelatte {
+        background: linear-gradient(to bottom, #ffeeca 25%, #ffd6b0 25%, #ffd6b0 65%, #643718 65%);
+    }
+
+    .flatwhite {
+        background: linear-gradient(to bottom, #ffd6b0 65%, #643718 65%);
+    }
+
+    .marocchino {
+        background: linear-gradient(to bottom, #ffeeca 25%, #3a1d07 25%, #3a1d07 65%, #643718 65%);
+    }
+
+    .mocha {
+        background: linear-gradient(to bottom, #ffeeca 20%, #ffd6b0 20%, #ffd6b0 40%, #3a1d07 40%, #3a1d07 65%, #643718 65%);
+    }
+
+    .bicerin {
+        background: linear-gradient(to bottom, #ffeeca 20%, #cdb694 20%, #cdb694 40%, #3a1d07 40%, #3a1d07 65%, #643718 65%);
+    }
+
+    .breve {
+        background: linear-gradient(to bottom, #231f20 5%, #ffeeca 5%, #ffeeca 35%, #ffd6b0 35%, #ffd6b0 65%, #643718 65%);
+    }
+
+    .rafcoffee {
+        background: linear-gradient(to bottom, #231f20 5%, #ffeeca 5%, #ffeeca 35%, #ffb982 35%, #ffb982 65%, #643718 65%);
+    }
+
+    .meadraf {
+        background: linear-gradient(to bottom, #231f20 5%, #ffeeca 5%, #ffeeca 35%, #ffb700 35%, #ffb700 65%, #643718 65%);
+    }
+
+    .viennacoffee {
+        background: linear-gradient(to bottom, #ffeeca 45%, #643718 45%);
+    }
+
+    .chocolatemilk {
+        background: linear-gradient(to bottom, #ffd6b0 45%, #643718 45%);
+    }
+
+    .info {
+        margin-left: 150px;
+        margin-top: 35px;
+    }
+
+    h1 {
+        color: #ffffff;
+        font-size: 1em;
+        letter-spacing: 3px;
+    }
+
+    footer {
+        position: absolute;
+        bottom: -10%;
+        right: 0;
+        text-align: center;
+        font-size: 0.75em;
+        text-transform: uppercase;
+        padding: 10px;
+    }
+
+    footer p {
+        text-transform: uppercase;
+        color: #ffd6b0;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 3px;
+    }
+
+    footer a {
+        font-family: "Montserrat", sans-serif;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        color: #b0dfe1;
+    }
+</style>
+
+<div class="container">
+    <div class="grid">
+        <div class="item">
+            <div class="cup cup-tall espresso">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>espresso</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-tall doppio">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>doppio</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-tall lungo">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>lungo</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-tall ristretto">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>ristretto</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-tall macchiato">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>macchiato</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-tall corretto">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>corretto</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-tall conpanna">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>con panna</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-tall romano">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>romano</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-grande cappuccino">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>cappuccino</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-grande americano">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>americano</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-grande cafelatte">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>café latte</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-grande flatwhite">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>flat white</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-grande marocchino">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>marocchino</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-grande mocha">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>mocha</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-grande bicerin">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>bicerin</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-grande breve">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>breve</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-grande rafcoffee">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>raf coffee</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-grande meadraf">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>mead raf</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-grande viennacoffee">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>vienna coffee</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="cup cup-grande chocolatemilk">
+                <div class="handle"></div>
+            </div>
+            <div class="info">
+                <h1>chocolate milk</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
