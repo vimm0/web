@@ -1,0 +1,183 @@
+<template>
+    <div class="container">
+        <!-- <div class="about"> -->
+        <!-- <h1>This is an about page</h1> -->
+        <!-- </div> -->
+
+        <div class="circle">
+            <div class="upper-arc"></div>
+            <div class="black-box"></div>
+            <div class="white-box"></div>
+            <div class="minor-arc"></div>
+            <div class="day"></div>
+            <div class="night"></div>
+        </div>
+    </div>
+</template>
+<style lang="scss">
+    .circle {
+        width: 25rem;
+        height: 25rem;
+        border: 1px solid;
+        background: linear-gradient(to left, #000 75%, #fff 75% 75%);
+        /*background-color: #000;*/
+        /*background: conic-gradient(#fff 0.25turn, #000 0.25turn 0.5turn, #fff 0.5turn 0.75turn, #000 0.75turn) top left / 25% 25% repeat;*/
+        /*background: linear-gradient( -45deg, blue, blue 49%, white 49%, white 51%, red 51% );*/
+
+        border-radius: 50%;
+
+        & .upper-arc {
+            /*background-color: orange;*/
+            /*height: 10rem;*/
+            /*width: 10rem;*/
+            /*!* border-radius: 90% 0; *!*/
+            /*!* border-top-left-radius: 50%; *!*/
+            /*!* border-top-right-radius: 50%; *!*/
+            /*!* border-bottom-right-radius: 12rem; *!*/
+            position: relative;
+            /*top: 3rem;*/
+            /*left: 0;*/
+        }
+
+        & .upper-arc:before {
+            content: "";
+            position: absolute;
+            top: 18px;
+            left: 37px;
+            border-top: 204px solid white;
+            border-left: 62px solid white;
+            width: 8rem;
+            height: 8rem;
+            background: white;
+            border-radius: 100px;
+
+        }
+
+
+        & .upper-arc:after {
+            content: "";
+            position: absolute;
+            top: 196px;
+            left: 50px;
+            border-top: 137px solid #000;
+            border-left: 29px solid #000;
+            width: 10rem;
+            height: 0;
+            background: #000;
+            /*border-radius: 91px;*/
+            border-top-left-radius: 91px;
+            border-top-right-radius: 91px 0;
+            border-bottom-right-radius: 91px;
+            border-bottom-left-radius: 91px;
+        }
+
+        & .black-box:before {
+            content: "";
+            position: absolute;
+            top: 174px;
+            left: 336px;
+            transform: rotate(14deg);
+            border-top: 102px solid #000;
+            border-left: 23px solid #000;
+            width: 9rem;
+            height: 27px;
+            background: #000;
+            border-top-left-radius: 1051rem;
+            border-top-right-radius: 91px;
+            border-bottom-right-radius: 91px;
+            border-bottom-left-radius: 91px;
+        }
+
+        & .black-box:after {
+            content: "";
+            position: absolute;
+            top: 154px;
+            left: 396px;
+            transform: rotate(
+                            -37deg
+            );
+            border-top: 102px solid #000;
+            border-left: 23px solid #000;
+            width: 8rem;
+            height: 0;
+            background: #000;
+        }
+
+        & .white-box:before {
+            content: "";
+            position: absolute;
+            top: 106px;
+            left: 323px;
+            transform: rotate(
+                            193deg
+            );
+            border-top: 102px solid #fff;
+            border-left: 23px solid #fff;
+            width: 9rem;
+            height: 27px;
+            background: #fff;
+            border-top-left-radius: 194rem;
+            border-top-right-radius: 91px;
+            border-bottom-right-radius: 91px;
+            border-bottom-left-radius: 91px;
+        }
+
+        & .white-box:after {
+            content: "";
+            position: absolute;
+            top: 195px;
+            left: 310px;
+            transform: rotate(
+                            -16deg
+            );
+            border-top: 102px solid transparent;
+            border-left: 23px solid transparent;
+            width: 12rem;
+            height: 0px;
+            background: #000000;
+            border-top-left-radius: 194rem;
+            border-top-right-radius: 91px;
+            border-bottom-right-radius: 91px;
+            border-bottom-left-radius: 91px;
+        }
+
+        & .minor-arc:before {
+            content: "";
+            position: absolute;
+            top: 163px;
+            left: 455px;
+            transform: rotate(
+                            -116deg
+            );
+            border-top: 49px solid transparent;
+            border-left: 23px solid transparent;
+            width: 1rem;
+            height: 0px;
+            background: #191919;
+            border-top-left-radius: 194rem;
+            border-top-right-radius: 91px;
+            border-bottom-right-radius: 91px;
+            border-bottom-left-radius: 91px;
+        }
+
+        & .day {
+            background-color: #000;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 50%;
+            position: relative;
+            top: 3rem;
+            left: 8rem;
+        }
+
+        & .night{
+            background-color: #fff;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 50%;
+            position: relative;
+    top: 15rem;            left: 8rem;
+        }
+
+    }
+</style>
